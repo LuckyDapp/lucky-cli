@@ -32,42 +32,22 @@ npx ts-node src/luckyCli.ts [Options]
 ```
 Options:
     --help                          Show help                        [boolean]
-    --ce, --currentEra              Display the current era for dApp staking
-    --lrr, --lastEraReceivedReward  Display the last era when the dapp
-                                    received rewards from dApp staking
-    --lrd, --lastEraRaffleDone      Display the last era when the raffle has
-                                    been run
-    --dc, --displayConfiguration    Diplay the configuration (contract and
-                                    http addresses)
-    --ch, --checks                  Check if the grants and the configuration
-                                    in the smart contracts have been set
-    --cl, --claim                   Claim dappStaking developer rewards for a
-                                    given era - era is mandatory
-    --ri, --readIndex               Read data from the indexer for a given era
-                                    - era is mandatory
-    --so, --setOracle               Set Oracle data for a given era - era is
-                                    mandatory
-    --co, --clearOracle             Clear Oracle data for a given era - era is
-                                    mandatory
-    -r, --raffle                    Start the raffle for a given era - era is
-                                    mandatory
-    -a, --all                       Equivalent to --checks --claim --setOracle
-                                    --raffle for a given era or for for all
-                                      era (from --lastEra to --currentEra) if no
-                                      era is provided
-    --era                           Given era                         [number]
-    -d, --debug                         Debug mode: display more information
+    --dc, --displayConfiguration    Display the configuration
+    --di, --displayInformation      Display information from indexer and smart contracts
+    --ch, --checks                  Check if the grants and the configuration in the smart contracts have been set
+    --cl, --claim                   Claim dappStaking developer rewards
+     -r, --raffle                   Start the raffle
     --version                       Show version number                       
 ```
 
-If you want to claim the rewards from dapp staking, read the data (partcipant + rewards) from the indexer, set the data in the oracle and start the raffle for a given era you can:
+If you want to claim the rewards from dapp staking for all missing era.
 
 ```
-npx ts-node src/luckyCli.ts --all --era <era>
+npx ts-node src/luckyCli.ts --network <network> --claim 
 ```
 
-If you want to do it for all remaning eras you can:
+If you want to run the raffle for the last missing era.
 
 ```
-npx ts-node src/luckyCli.ts --all
+npx ts-node src/luckyCli.ts --network <network> --raffle 
 ```
