@@ -1,4 +1,4 @@
-# Schedulers used by the dApp 'Lucky'
+# Tools for 'Lucky'
 
 Phat Contracts need to be scheduled to 
 
