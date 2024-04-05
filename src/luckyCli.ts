@@ -10,10 +10,10 @@ import {initConnection as initSmartContractConnection} from "./smartContractHelp
 
 const argv = yargs(process.argv.slice(2)).options({
     dc: {alias: 'displayConfiguration', desc: 'Display the configuration (contract and http addresses)'},
-    di: {alias: 'displayInformation', desc: 'DDisplay information from indexer and smart contracts'},
+    di: {alias: 'displayInformation', desc: 'Display information from indexer and smart contracts'},
     ch: {alias: 'checks', desc: 'Check if the grants and the configuration in the smart contracts have been set'},
     cl: {alias: 'claim', desc: 'Claim dApp staking developer rewards (for all missing era)'},
-    r:  {alias: 'raffle', desc: 'Start the raffle for the last mist era'},
+    r:  {alias: 'raffle', desc: 'Start the raffle for all missing era'},
     net: {alias: 'network', choices:['shibuya', 'shiden', 'astar'], type:'string', desc: 'Specify the network', requiresArg: true},
     d: {alias: 'debug', desc: 'Debug mode: display more information'},
 }).version('0.1').parseSync();
