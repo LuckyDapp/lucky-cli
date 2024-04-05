@@ -28,7 +28,6 @@ async function claimEra(era: Number) : Promise<void> {
 
     return getEraInfo(era)
         .then((eraInfo) => {
-            console.log("Period %s and sub-period %s for era %s", eraInfo.period, eraInfo.subPeriod, eraInfo.era);
             if (eraInfo.subPeriod != "Voting") {
                 return claimDAppStaking(eraInfo.era);
             } else {
