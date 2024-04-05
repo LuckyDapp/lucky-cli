@@ -31,7 +31,7 @@ npx ts-node src/luckyCli.ts [Options]
 
 ```
 Options:
-    --help                          Show help                        [boolean]
+    --help                          Show help
     --dc, --displayConfiguration    Display the configuration
     --di, --displayInformation      Display information from indexer and smart contracts
     --ch, --checks                  Check if the grants and the configuration in the smart contracts have been set
