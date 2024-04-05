@@ -40,14 +40,21 @@ Options:
     --version                       Show version number                       
 ```
 
+If you want to check the configuration.
+
+```
+npx ts-node src/luckyCli.ts --network <network> --checks 
+```
+
 If you want to claim the rewards from dapp staking for all missing era.
 
 ```
 npx ts-node src/luckyCli.ts --network <network> --claim 
 ```
 
-If you want to run the raffle for the last missing era.
+If you want to run the raffle for all missing era.
 
 ```
 npx ts-node src/luckyCli.ts --network <network> --raffle 
 ```
+
