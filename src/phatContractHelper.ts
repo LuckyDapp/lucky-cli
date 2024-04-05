@@ -32,7 +32,7 @@ export async function initConnection(){
     console.log('You are connected to chain %s using %s v%s', chain, nodeName, nodeVersion);
 
     alice = new Keyring({ type: 'sr25519' }).addFromUri("//Alice")
-    aliceCertificate = await signCertificate({ api, pair: alice })
+    aliceCertificate = await signCertificate({ pair: alice })
 
     const phatRegistry = await OnChainRegistry.create(api);
     const contractKey = await phatRegistry.getContractKey(config.rafflePhatContractAddress) as string;
