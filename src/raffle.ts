@@ -5,8 +5,6 @@ import {signCertificate} from "@phala/sdk";
 
 export async function callRafflePhatContract() : Promise<void>{
 
-    console.log('Run raffle for era');
-
     const alice = new Keyring({ type: 'sr25519' }).addFromUri("//Alice")
     const aliceCertificate = await signCertificate({ pair: alice })
 

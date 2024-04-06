@@ -59,12 +59,24 @@ async function claimAllEras() : Promise<void>{
 
 async function runRaffle() : Promise<void>{
 
-    const nextEra = await getNextEraInRaffleConsumer();
+    let nextEra = await getNextEraInRaffleConsumer();
     const currentEra = await getCurrentEra();
 
-    if (nextEra < currentEra){
-        await initPhatContractConnection();
-        await callRafflePhatContract();
+    while (nextEra < currentEra){
+        console.log("Run raffle for era %s", nextEra);
+        await callRafflePhatContract().then(
+            () => {
+                console.log("Successfully run the raffle for era %s", nextEra);
+            }
+        ).catch( (error) => {
+            console.log("Error when running the raffle for era %s", nextEra);
+            return Promise.reject(error);
+        });
+
+        // wait 30 seconds
+        await new Promise( resolve => setTimeout(resolve, 30000));
+
+        nextEra = await getNextEraInRaffleConsumer();
     }
 }
 
@@ -104,6 +116,7 @@ async function run() : Promise<void>{
     }
 
     if (argv.raffle) {
+        await initPhatContractConnection();
         await runRaffle();
     }
 }
