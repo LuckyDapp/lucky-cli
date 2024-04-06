@@ -1,9 +1,14 @@
-import {alice, aliceCertificate, rafflePhatContract} from './phatContractHelper';
+import {rafflePhatContract} from './phatContractHelper';
+import {Keyring} from "@polkadot/api";
+import {signCertificate} from "@phala/sdk";
 
 
 export async function callRafflePhatContract() : Promise<void>{
 
     console.log('Run raffle for era');
+
+    const alice = new Keyring({ type: 'sr25519' }).addFromUri("//Alice")
+    const aliceCertificate = await signCertificate({ pair: alice })
 
     const {result, output} = await rafflePhatContract.query['runRaffle'](alice.address, {cert: aliceCertificate});
 

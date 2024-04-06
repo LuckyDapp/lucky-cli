@@ -63,6 +63,7 @@ async function runRaffle() : Promise<void>{
     const currentEra = await getCurrentEra();
 
     if (nextEra < currentEra){
+        await initPhatContractConnection();
         await callRafflePhatContract();
     }
 }
@@ -84,9 +85,7 @@ async function run() : Promise<void>{
         displayConfiguration();
     }
 
-    if (argv.displayInformation || argv.checks || argv.claim) {
-        await initSmartContractConnection();
-    }
+    await initSmartContractConnection();
 
     if (argv.displayInformation) {
         await getCurrentEra();
@@ -105,7 +104,6 @@ async function run() : Promise<void>{
     }
 
     if (argv.raffle) {
-        await initPhatContractConnection();
         await runRaffle();
     }
 }
