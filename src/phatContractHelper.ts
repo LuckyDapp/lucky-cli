@@ -1,44 +1,53 @@
-import {ApiPromise, Keyring, WsProvider} from '@polkadot/api';
-import {KeyringPair} from '@polkadot/keyring/types';
-import {CertificateData, OnChainRegistry, PinkContractPromise, signCertificate} from '@phala/sdk'
-import { typeDefinitions } from '@polkadot/types'
-import { types } from "@phala/sdk";
+import {
+    OnChainRegistry,
+    PinkContractPromise,
+    getClient,
+    getContract,
+} from '@phala/sdk'
 import {readFileSync} from 'fs';
 import {config} from './config';
 
-export let api : ApiPromise;
-
-export let alice : KeyringPair;
-export let aliceCertificate: CertificateData;
+export let client : OnChainRegistry;
 
 export let rafflePhatContract : PinkContractPromise;
 
 export async function initConnection(){
 
-    if (api){
+    if (client){
         return;
     }
 
-    api = await ApiPromise.create({
+    client = await getClient({
+        transport: config.phatContractRpc
+    });
+/*
+    api = await ApiPromise.create(options({
         provider: new WsProvider(config.phatContractRpc),
         noInitWarn: true,
-        //types: { ...types, ...typeDefinitions }
-    });
+    }));
+*/
+
     const[chain, nodeName, nodeVersion] = await Promise.all([
-        api.rpc.system.chain(),
-        api.rpc.system.name(),
-        api.rpc.system.version()
+        client.api.rpc.system.chain(),
+        client.api.rpc.system.name(),
+        client.api.rpc.system.version()
     ]);
     console.log('You are connected to chain %s using %s v%s', chain, nodeName, nodeVersion);
 
-    alice = new Keyring({ type: 'sr25519' }).addFromUri("//Alice")
-    aliceCertificate = await signCertificate({ api, pair: alice })
+    const abi = readFileSync(config.rafflePhatContractMetadata, 'utf-8');
 
-    const phatRegistry = await OnChainRegistry.create(api);
-    const contractKey = await phatRegistry.getContractKey(config.rafflePhatContractAddress) as string;
+    //const phatRegistry = await OnChainRegistry.create(api);
+    //const contractKey = await phatRegistry.getContractKey(config.rafflePhatContractAddress) as string;
+    //rafflePhatContract = new PinkContractPromise(api, phatRegistry, abi, config.rafflePhatContractAddress, contractKey);
 
-    const rafflePhatContractMetadata = readFileSync(config.rafflePhatContractMetadata);
-    const abi = JSON.parse(JSON.stringify(rafflePhatContractMetadata.toString()))
-    rafflePhatContract = new PinkContractPromise(api, phatRegistry, abi, config.rafflePhatContractAddress, contractKey);
+    //const suri = '//Alice';
+    //const provider = await KeyringPairProvider.createFromSURI(client.api, suri);
 
+    rafflePhatContract = await getContract({
+        client,
+        contractId: config.rafflePhatContractAddress,
+        abi,
+        //provider,
+        }
+    )
 }
