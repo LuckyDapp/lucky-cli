@@ -3,15 +3,15 @@ interface Seed {
 }
 
 class ShibuyaConfig implements Seed {
-    seed = 'measure acid custom dash market rebuild cup spread stairs kit trust intact';
+    seed = 'your mnemonic phrase';
 }
 
 class ShidenConfig implements Seed {
-    seed = 'oil episode increase pair hungry slice long rug solid neutral album camera';
+    seed = 'your mnemonic phrase';
 }
 
 class AstarConfig implements Seed {
-    seed = 'this good fatal size raccoon crisp focus scrap lumber green element hello';
+    seed = 'your mnemonic phrase';
 }
 
 export let seed : Seed;
