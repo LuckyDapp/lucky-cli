@@ -21,6 +21,17 @@ Last, under the project directory, run following command to install all the depe
 npm install
 ```
 
+## Configuration
+
+Copy the configuration for the seed to use to claim the dAppStaking rewards or query the contracts.
+
+```
+cp seed_example.ts seed.ts 
+```
+By default, we use the `Alice` account.
+To claim the dAppStaking rewards, you will have to update the mnemonic phrase because `Alice` will not have enough token to pay the fee. 
+To check the configuration or run the raffle, you can let the `Alice` account. 
+
 ## Run
 
 Last, under the project directory, run following command to install all the dependency.
