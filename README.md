@@ -26,7 +26,7 @@ npm install
 Copy the configuration for the seed to use to claim the dAppStaking rewards or query the contracts.
 
 ```
-cp seed_example.ts seed.ts 
+cp src/seed_example.ts src/seed.ts 
 ```
 By default, we use the `Alice` account.
 To claim the dAppStaking rewards, you will have to update the mnemonic phrase because `Alice` will not have enough token to pay the fee. 
