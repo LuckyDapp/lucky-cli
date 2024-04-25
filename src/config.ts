@@ -44,7 +44,7 @@ class ShidenConfig implements Config {
     // wss://shiden-rpc.dwellir.com
     // wss://shiden.api.onfinality.io/public-ws
     smartContractRpc = 'wss://rpc.shiden.astar.network';
-    phatContractRpc = 'wss://poc6.phala.network/ws';
+    phatContractRpc = 'wss://phala.network/ws';
     dAppStakingApplicationSmartContractAddress = 'X6ykUS6L6CH4EoZitZsYJsCxH2AGk2ky9G6a2xeu1W9ffTP';
     dAppStakingDeveloperSmartContractAddress = 'aqcmQUATZiaHmZtueE5chfSZRTvsvtSpmx57fZBhktDt4Rm';
     rewardManagerSmartContractAddress = 'X6yBHZm9MGzedCVBn6nGHHUDxEnjUNzSoN4aqAP4qooQpEU';
@@ -61,7 +61,7 @@ class ShidenConfig implements Config {
 class AstarConfig implements Config {
 
     smartContractRpc = 'wss://rpc.astar.network';
-    phatContractRpc = 'wss://poc6.phala.network/ws';
+    phatContractRpc = 'wss://phala.network/ws';
     dAppStakingApplicationSmartContractAddress = 'ZSV1GVepvmWFdshMWgczS4zYvmmwEsBjWQjN4WDpUEFRRPy';
     dAppStakingDeveloperSmartContractAddress = 'ZEUr1PBaxshhhPcF4jeVFVoC6BwCDYj48UsJ5ShquWN2yeE';
     rewardManagerSmartContractAddress = 'ZSV1GVepvmWFdshMWgczS4zYvmmwEsBjWQjN4WDpUEFRRPy';
