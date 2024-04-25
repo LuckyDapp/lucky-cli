@@ -48,13 +48,13 @@ class ShidenConfig implements Config {
     dAppStakingApplicationSmartContractAddress = 'X6ykUS6L6CH4EoZitZsYJsCxH2AGk2ky9G6a2xeu1W9ffTP';
     dAppStakingDeveloperSmartContractAddress = 'aqcmQUATZiaHmZtueE5chfSZRTvsvtSpmx57fZBhktDt4Rm';
     rewardManagerSmartContractAddress = 'X6yBHZm9MGzedCVBn6nGHHUDxEnjUNzSoN4aqAP4qooQpEU';
-    raffleConsumerSmartContractAddress = 'antwZPZH7fuhLwcjKQUT2cbpfjcKUJS1bt1Lnq2VxSszg8d';
-    rafflePhatContractAddress = "null";
-    rafflePhatContractAttestorAddress = "null";
+    raffleConsumerSmartContractAddress = 'W5pzj2pfkkvsNbyLCSA92G5VNYWmxvS86EiN9Kog6PrTfij';
+    rafflePhatContractAddress = "0xfc93a4d54159c580fa015e64d9a9d261f328043947815e3020bc8909f5e0c7f3";
+    rafflePhatContractAttestorAddress = "ZJvvMEBuSzo374xtFaHNGbKrbwNhK9oVmUGKVtXFDPYF1jK";
     subqlUrl = 'https://query.substrate.fi/lucky-subquery-shiden';
     dAppStakingDeveloperSmartContractMetadata = './metadata/shiden/dapps_staking_developer_metadata.json';
     rewardManagerSmartContractMetadata = './metadata/shiden/reward_manager_metadata.json';
-    raffleConsumerSmartContractMetadata = './metadata/shiden/lucky_raffle_metadata.json';
+    raffleConsumerSmartContractMetadata = './metadata/shiden/raffle_consumer_metadata.json';
     rafflePhatContractMetadata = "./metadata/shiden/raffle_metadata.json";
 }
 
