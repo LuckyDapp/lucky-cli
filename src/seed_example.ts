@@ -3,15 +3,15 @@ interface Seed {
 }
 
 class ShibuyaConfig implements Seed {
-    seed = 'your mnemonic phrase';
+    seed = 'bottom drive obey lake curtain smoke basket hold race lonely fit walk//Alice';
 }
 
 class ShidenConfig implements Seed {
-    seed = 'your mnemonic phrase';
+    seed = 'bottom drive obey lake curtain smoke basket hold race lonely fit walk//Alice';
 }
 
 class AstarConfig implements Seed {
-    seed = 'your mnemonic phrase';
+    seed = 'bottom drive obey lake curtain smoke basket hold race lonely fit walk//Alice';
 }
 
 export let seed : Seed;
