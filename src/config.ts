@@ -65,14 +65,14 @@ class AstarConfig implements Config {
     dAppStakingApplicationSmartContractAddress = 'ZSV1GVepvmWFdshMWgczS4zYvmmwEsBjWQjN4WDpUEFRRPy';
     dAppStakingDeveloperSmartContractAddress = 'ZEUr1PBaxshhhPcF4jeVFVoC6BwCDYj48UsJ5ShquWN2yeE';
     rewardManagerSmartContractAddress = 'ZSV1GVepvmWFdshMWgczS4zYvmmwEsBjWQjN4WDpUEFRRPy';
-    raffleConsumerSmartContractAddress = 'XPC4BUeSHhTWqzUdUWtW1cTNHhktNPgenKZ4qq2FkKR2two';
-    rafflePhatContractAddress = "41mr9YDW65QyA5EYF3h4KrAXe9oedRKAXxVtxTDDGRaEAEgM";
-    rafflePhatContractAttestorAddress = "null";
+    raffleConsumerSmartContractAddress = 'W8aL4naa9CarCYxpepfm3BQS5SqMnJXfe2pPQZ3Kiie6k82';
+    rafflePhatContractAddress = "0x564f62fa66dbdfd304a4bd61eb9e52f5786d851adf45def830fb4830373d4699";
+    rafflePhatContractAttestorAddress = "ZNkAgXC3oKsBE3TsLrhf593Z9YSXz9RkHeUKCFSiZ1DFtVH";
     subqlUrl = 'https://query.substrate.fi/lucky-subquery-astar';
     dAppStakingDeveloperSmartContractMetadata = './metadata/astar/dapps_staking_developer_metadata.json';
     rewardManagerSmartContractMetadata = './metadata/astar/reward_manager_metadata.json';
-    raffleConsumerSmartContractMetadata = './metadata/astar/lucky_raffle_metadata.json';
-    rafflePhatContractMetadata = "null";
+    raffleConsumerSmartContractMetadata = './metadata/astar/raffle_consumer_metadata.json';
+    rafflePhatContractMetadata = "./metadata/astar/raffle_metadata.json";
 }
 
 export let config : Config;
