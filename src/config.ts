@@ -49,8 +49,8 @@ class ShidenConfig implements Config {
     dAppStakingDeveloperSmartContractAddress = 'aqcmQUATZiaHmZtueE5chfSZRTvsvtSpmx57fZBhktDt4Rm';
     rewardManagerSmartContractAddress = 'X6yBHZm9MGzedCVBn6nGHHUDxEnjUNzSoN4aqAP4qooQpEU';
     raffleConsumerSmartContractAddress = 'W5pzj2pfkkvsNbyLCSA92G5VNYWmxvS86EiN9Kog6PrTfij';
-    rafflePhatContractAddress = "0xfc93a4d54159c580fa015e64d9a9d261f328043947815e3020bc8909f5e0c7f3";
-    rafflePhatContractAttestorAddress = "ZJvvMEBuSzo374xtFaHNGbKrbwNhK9oVmUGKVtXFDPYF1jK";
+    rafflePhatContractAddress = "0x22e8aef425ebcf27c997a791ec8ab7d75d38c936c462ddf725205bdab99e8b24";
+    rafflePhatContractAttestorAddress = "X1prqoE1GxJ2GjrJ2xb7NPBx5APwAku1XNnKUw3oxiLfB5f";
     subqlUrl = 'https://query.substrate.fi/lucky-subquery-shiden';
     dAppStakingDeveloperSmartContractMetadata = './metadata/shiden/dapps_staking_developer_metadata.json';
     rewardManagerSmartContractMetadata = './metadata/shiden/reward_manager_metadata.json';
