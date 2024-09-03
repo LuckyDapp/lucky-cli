@@ -29,8 +29,8 @@ class ShibuyaConfig implements Config {
     dAppStakingDeveloperSmartContractAddress = 'WayJSoeDvHLJ8rXPqrPyQQwznntbxvjwvmq1AKBpu9phYHr';
     rewardManagerSmartContractAddress = 'X8nqJsFQWBk137WxetcPdAGLwnJ8xpAQ5tXS1bNsHKaz1q6';
     raffleConsumerSmartContractAddress = 'WxB2uwWr1JmUZofp1amiKUcsjtsCZKTUBZg4MWf3HJoMQuY';
-    rafflePhatContractAddress = "0xb9dd82761d4501791dd284ff97ceb4ffa0b6d928b3b466353ddc1228bd7622dd";
-    rafflePhatContractAttestorAddress = "ZCYYxa5DAF6UMBVfNT9wDbRNf4imiugXa6jtC8Xdp8T35cM";
+    rafflePhatContractAddress = "0x285d93115babe3b5ffd2f05ca0f50bdd8d0065c1e9a69f4fcf2a1e7d405deb56";
+    rafflePhatContractAttestorAddress = "a35eiFmqLC9Mn3G2JuazJEjkUebq8ePw377qYEvrMVFbB6N";
     subqlUrl = 'https://query.substrate.fi/lucky-subquery-shibuya';
     dAppStakingDeveloperSmartContractMetadata = './metadata/shibuya/dapps_staking_developer_metadata.json';
     rewardManagerSmartContractMetadata = './metadata/astar/reward_manager_metadata.json';
