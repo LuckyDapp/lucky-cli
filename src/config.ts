@@ -44,13 +44,14 @@ class ShidenConfig implements Config {
     // wss://shiden-rpc.dwellir.com
     // wss://shiden.api.onfinality.io/public-ws
     smartContractRpc = 'wss://rpc.shiden.astar.network';
-    phatContractRpc = 'wss://api.phala.network/ws';
+    //phatContractRpc = 'wss://api.phala.network/ws';
+    phatContractRpc = 'wss://poc6.phala.network/ws';
     dAppStakingApplicationSmartContractAddress = 'X6ykUS6L6CH4EoZitZsYJsCxH2AGk2ky9G6a2xeu1W9ffTP';
     dAppStakingDeveloperSmartContractAddress = 'aqcmQUATZiaHmZtueE5chfSZRTvsvtSpmx57fZBhktDt4Rm';
     rewardManagerSmartContractAddress = 'X6yBHZm9MGzedCVBn6nGHHUDxEnjUNzSoN4aqAP4qooQpEU';
     raffleConsumerSmartContractAddress = 'W5pzj2pfkkvsNbyLCSA92G5VNYWmxvS86EiN9Kog6PrTfij';
-    rafflePhatContractAddress = "0x22e8aef425ebcf27c997a791ec8ab7d75d38c936c462ddf725205bdab99e8b24";
-    rafflePhatContractAttestorAddress = "X1prqoE1GxJ2GjrJ2xb7NPBx5APwAku1XNnKUw3oxiLfB5f";
+    rafflePhatContractAddress = "0x96dce0d29280ce0e44648d79d7ea0743905c0e176e2a7d68f9222b9eda907666";
+    rafflePhatContractAttestorAddress = "X357UsW3jp59VuRA4MpQ6yLvjXvYay65AGEei33axejjivR";
     subqlUrl = 'https://query.substrate.fi/lucky-subquery-shiden';
     dAppStakingDeveloperSmartContractMetadata = './metadata/shiden/dapps_staking_developer_metadata.json';
     rewardManagerSmartContractMetadata = './metadata/shiden/reward_manager_metadata.json';
@@ -61,13 +62,14 @@ class ShidenConfig implements Config {
 class AstarConfig implements Config {
 
     smartContractRpc = 'wss://rpc.astar.network';
-    phatContractRpc = 'wss://api.phala.network/ws';
+    //phatContractRpc = 'wss://api.phala.network/ws';
+    phatContractRpc = 'wss://poc6.phala.network/ws';
     dAppStakingApplicationSmartContractAddress = 'ZSV1GVepvmWFdshMWgczS4zYvmmwEsBjWQjN4WDpUEFRRPy';
     dAppStakingDeveloperSmartContractAddress = 'ZEUr1PBaxshhhPcF4jeVFVoC6BwCDYj48UsJ5ShquWN2yeE';
     rewardManagerSmartContractAddress = 'ZSV1GVepvmWFdshMWgczS4zYvmmwEsBjWQjN4WDpUEFRRPy';
     raffleConsumerSmartContractAddress = 'W8aL4naa9CarCYxpepfm3BQS5SqMnJXfe2pPQZ3Kiie6k82';
-    rafflePhatContractAddress = "0x564f62fa66dbdfd304a4bd61eb9e52f5786d851adf45def830fb4830373d4699";
-    rafflePhatContractAttestorAddress = "ZNkAgXC3oKsBE3TsLrhf593Z9YSXz9RkHeUKCFSiZ1DFtVH";
+    rafflePhatContractAddress = "0x615fbe7a75142f6d76d021452ea3efab9a82e15d860109953a526576036c2111";
+    rafflePhatContractAttestorAddress = "ZizL5iw5BPksAQyJiDgsvuPWUWRbNUbYNMLjg2KKNo3KcpZ";
     subqlUrl = 'https://query.substrate.fi/lucky-subquery-astar';
     dAppStakingDeveloperSmartContractMetadata = './metadata/astar/dapps_staking_developer_metadata.json';
     rewardManagerSmartContractMetadata = './metadata/astar/reward_manager_metadata.json';
